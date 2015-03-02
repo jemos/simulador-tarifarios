@@ -1,0 +1,50 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#dropbox {
+	width: 300px;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px dashed silver;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#filebrowser {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
+
+#filelistContainer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#filelist {
+}
+
+#phoneRecords {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#phoneRecords td {
+/*	border: 1px solid silver;*/
+	padding: 3px;
+}
+
+.center {
+	text-align: center;
+}

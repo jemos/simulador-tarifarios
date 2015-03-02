@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simulador de Tarifários</title>
+
+    <!-- Angular -->
+    <script src="js/lib/angular.js"></script>
+    <script>
+    	var myApp = angular.module('tarifarios',[]);
+    </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/morris.css">
+	<link rel="stylesheet" href="css/tarifarios.css">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/lib/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/raphael-min.js"></script>
+	<script src="js/lib/morris.min.js"></script>
+	<script src="js/lib/ngMorris.js"></script>
+	<script src="js/tarifarios.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container" ng-app="tarifarios">
+
+    	<div class="panel panel-default">
+    		<div class="panel-heading">Facturas detalhadas carregadas:</div>
+			<div class="panel-body">
+				<ul class="list-group">
+  <li class="list-group-item"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+			</div>
+		</div>
+
+    	<div class="row" ng-controller="RecordSampleController">
+			<div class="col-xs-6 col-md-4 center" ng-repeat="filterEntry in filterList">
+				<div class="well well-sm" ng-controller="RecordFilterController">
+					<p class="lead center">{{ filterEntry.name }}</p>
+					<img src="http://placehold.it/200x200">
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+		<!--
+
+
+      <div class="starter-template">
+        <h1>Header</h1>
+        <p class="lead"></p>
+		<div id="filebrowser"><input type="file" id="files" name="files[]" multiple /></div>
+		<div id="filelistContainer"><ul id="filelist"></ul></div>
+      </div>
+
+      <table id="phoneRecords">
+	  </table>
+	  
+	<div class="row">
+		<div class="col-md-4">
+			<div class="well well-sm">
+				<div class="lead center">SMS vs Rede</div>
+	  			<div id="netDistributionGraph" style="height: 200px;"></div>
+	  		</div>
+		</div>
+		<div class="col-md-4">
+			<div class="well well-sm">
+				<div class="lead center">Minutos vs Rede</div>
+	  			<div id="netCallDistributionGraph" style="height: 200px;"></div>
+	  		</div>
+		</div>
+		<div class="col-md-4">
+			<div class="well well-sm">
+				<div class="lead center">Perfil de Chamadas/SMS</div>
+	  			<div id="overallDistributionGraph" style="height: 200px;"></div>
+	  		</div>
+		</div>
+	</div>
+
+	  
+	  
+    </div><!-- /.container -->
+
+  </body>
+</html>
